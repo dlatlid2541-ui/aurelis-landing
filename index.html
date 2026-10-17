@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AURÉLIS | Return to Your Skin Rhythm</title>
+    <meta
+      name="description"
+      content="아우렐리스 코스메틱스 — 피부 리듬을 존중하는 프레스티지 더마 에센셜 스킨케어. Return to Your Skin Rhythm."
+    />
+    <meta property="og:title" content="AURÉLIS | Return to Your Skin Rhythm" />
+    <meta
+      property="og:description"
+      content="피부를 급히 바꾸기보다, 본연의 균형으로 돌아갈 시간을 설계합니다."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/assets/images/hero-poster.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Sans+KR:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/tokens.css" />
+    <link rel="stylesheet" href="/css/layout.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+  </head>
+  <body>
+    <header class="site-header is-over-hero" id="site-header">
+      <div class="container header-inner">
+        <a href="#top" class="logo" aria-label="AURÉLIS 홈">AURÉLIS</a>
+        <nav class="nav-desktop" aria-label="주요 메뉴">
+          <a class="nav-link" href="#story">Story</a>
+          <a class="nav-link" href="#products">Products</a>
+          <a class="nav-link" href="#ingredients">Ingredients</a>
+          <a class="nav-link" href="#ritual">Ritual</a>
+          <a class="nav-link" href="#contact">Contact</a>
+        </nav>
+        <button
+          type="button"
+          class="nav-toggle"
+          id="nav-toggle"
+          aria-expanded="false"
+          aria-controls="nav-mobile"
+          aria-label="메뉴 열기"
+        >
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+      </div>
+      <nav class="nav-mobile" id="nav-mobile" aria-label="모바일 메뉴" hidden>
+        <ul class="nav-mobile-list">
+          <li><a class="nav-link" href="#story">Story</a></li>
+          <li><a class="nav-link" href="#products">Products</a></li>
+          <li><a class="nav-link" href="#ingredients">Ingredients</a></li>
+          <li><a class="nav-link" href="#ritual">Ritual</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="top" class="hero media-bg media-bg--hero" aria-label="히어로">
+        <video
+          class="media-bg__video hero-video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          poster="/assets/images/hero-poster.jpg"
+          aria-hidden="true"
+        >
+          <source src="/assets/video/hero-loop.mp4" type="video/mp4" />
+        </video>
+        <div class="media-bg__overlay" aria-hidden="true"></div>
+        <div class="container media-bg__content hero">
+          <div class="reveal">
+            <p class="hero-eyebrow">Aurelis Cosmetics</p>
+            <h1 class="hero-title">Return to Your Skin Rhythm</h1>
+            <p class="hero-tagline">
+              피부를 급히 바꾸기보다, 본연의 균형으로 돌아갈 시간을 설계합니다.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-light" href="#products">제품 보기</a>
+              <a class="btn btn-outline-light" href="#contact">문의하기</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="story" class="section">
+        <div class="container">
+          <div class="story-intro">
+            <div class="reveal">
+              <p class="section-label">Brand Story</p>
+              <h2 class="section-title">지금 필요한 만큼,<br />피부의 리듬을 읽습니다</h2>
+              <p class="section-lead">
+                아우렐리스는 ‘더 많이’가 아닌 목적이 분명한 케어로, 사용자가 자신의 피부
+                신호를 편안하게 관찰하도록 돕습니다.
+              </p>
+            </div>
+            <div class="values-grid reveal">
+              <article class="value-card">
+                <h3>정밀함</h3>
+                <p>복잡한 루틴 대신 목적이 분명한 제품과 사용법을 제안합니다.</p>
+              </article>
+              <article class="value-card">
+                <h3>절제</h3>
+                <p>과도한 장식과 불필요한 단계를 줄여 본질에 집중합니다.</p>
+              </article>
+              <article class="value-card">
+                <h3>감각</h3>
+                <p>빛, 유리, 물성에서 느껴지는 조용한 만족을 담습니다.</p>
+              </article>
+              <article class="value-card">
+                <h3>투명성</h3>
+                <p>성분과 사용 순서를 읽기 쉬운 언어로 공개합니다.</p>
+              </article>
+            </div>
+          </div>
+          <div class="story-grid">
+            <img
+              src="/assets/images/story-model-window.jpg"
+              alt="창가 자연광 아래 스킨케어를 즐기는 모습"
+              width="800"
+              height="1000"
+              loading="lazy"
+            />
+            <img
+              src="/assets/images/story-campaign-portrait.jpg"
+              alt="맑고 건강한 피부를 연출한 캠페인 포트레이트"
+              width="800"
+              height="1000"
+              loading="lazy"
+            />
+            <img
+              src="/assets/images/story-model-product.jpg"
+              alt="스킨케어 제품을 들고 있는 모습"
+              width="800"
+              height="1000"
+              loading="lazy"
+            />
+            <img
+              src="/assets/images/story-product-photography.jpg"
+              alt="미니멀 배경의 스킨케어 제품 연출"
+              width="800"
+              height="1000"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="products" class="section">
+        <div class="container">
+          <div class="reveal">
+            <p class="section-label">Products</p>
+            <h2 class="section-title">네 가지 리듬, 하나의 루틴</h2>
+            <p class="section-lead">
+              피부 컨디션의 미세한 변화에 맞춰 필요한 단계만 정교하게 제안합니다.
+            </p>
+          </div>
+          <div class="products-grid" id="products-grid" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section id="ingredients" class="section section--ingredients">
+        <div class="container">
+          <div class="reveal">
+            <p class="section-label">Key Ingredients</p>
+            <h2 class="section-title">피부 리듬을 돕는 핵심 성분</h2>
+            <p class="section-lead">
+              필요한 만큼만, 투명하게 담은 세 가지 성분으로 장벽·수분·진정을 균형 있게
+              설계했습니다.
+            </p>
+          </div>
+          <div class="ingredients-grid" id="ingredients-grid" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section id="ritual" class="section ritual media-bg media-bg--ritual" aria-label="스킨 리추얼">
+        <video
+          class="media-bg__video ritual-video"
+          muted
+          loop
+          playsinline
+          preload="none"
+          poster="/assets/images/ritual-still.jpg"
+          aria-hidden="true"
+        >
+          <source src="/assets/video/ritual-loop.mp4" type="video/mp4" />
+        </video>
+        <div class="media-bg__overlay" aria-hidden="true"></div>
+        <div class="container media-bg__content">
+          <div class="reveal">
+            <p class="section-label">Daily Ritual</p>
+            <h2 class="section-title">아침과 밤, 피부의 호흡에 맞춘 순서</h2>
+            <div class="ritual-steps">
+              <div class="ritual-step">
+                <span class="ritual-step__num">01</span>
+                <div>
+                  <h3>에센스</h3>
+                  <p>루멘 하이드라로 수분 레이어를 가볍게 쌓습니다.</p>
+                </div>
+              </div>
+              <div class="ritual-step">
+                <span class="ritual-step__num">02</span>
+                <div>
+                  <h3>세럼</h3>
+                  <p>캄 베일로 민감해진 날의 장벽을 조용히 케어합니다.</p>
+                </div>
+              </div>
+              <div class="ritual-step">
+                <span class="ritual-step__num">03</span>
+                <div>
+                  <h3>크림</h3>
+                  <p>바이탈 트레이스로 탄력과 윤기에 깊이를 더합니다.</p>
+                </div>
+              </div>
+              <div class="ritual-step">
+                <span class="ritual-step__num">04</span>
+                <div>
+                  <h3>오일</h3>
+                  <p>녹턴 리페어로 밤 루틴의 마지막을 완성합니다.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact-section">
+        <div class="contact-bg" aria-hidden="true">
+          <img src="/assets/images/contact-background.jpg" alt="" />
+        </div>
+        <div class="container contact-inner">
+          <div class="reveal">
+            <p class="section-label">Contact</p>
+            <h2 class="section-title">문의하기</h2>
+            <p class="section-lead">
+              제품, 도매, 협업 문의를 남겨 주시면 검토 후 연락드립니다.
+            </p>
+          </div>
+          <div class="contact-form-wrap reveal">
+            <form id="contact-form" class="form-grid" novalidate>
+              <div class="form-honeypot" aria-hidden="true">
+                <label for="website">Website</label>
+                <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
+              </div>
+              <div class="form-field">
+                <label for="inquiry-type">문의 유형 <span aria-hidden="true">*</span></label>
+                <select id="inquiry-type" name="type" required>
+                  <option value="">선택해 주세요</option>
+                  <option value="제품">제품</option>
+                  <option value="도매">도매</option>
+                  <option value="협업">협업</option>
+                  <option value="기타">기타</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="product-interest">관심 제품</label>
+                <select id="product-interest" name="product_interest">
+                  <option value="">해당 없음</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="contact-name">이름 <span aria-hidden="true">*</span></label>
+                <input type="text" id="contact-name" name="name" required minlength="2" maxlength="60" autocomplete="name" />
+              </div>
+              <div class="form-field">
+                <label for="contact-email">이메일 <span aria-hidden="true">*</span></label>
+                <input type="email" id="contact-email" name="email" required autocomplete="email" />
+              </div>
+              <div class="form-field">
+                <label for="contact-phone">연락처 (선택)</label>
+                <input type="tel" id="contact-phone" name="phone" autocomplete="tel" />
+              </div>
+              <div class="form-field">
+                <label for="contact-company">회사명 (선택)</label>
+                <input type="text" id="contact-company" name="company" autocomplete="organization" />
+              </div>
+              <div class="form-field">
+                <label for="contact-message">문의 내용 <span aria-hidden="true">*</span></label>
+                <textarea id="contact-message" name="message" required minlength="10" maxlength="2000"></textarea>
+              </div>
+              <div class="form-field" id="privacy-field">
+                <label class="form-checkbox">
+                  <input type="checkbox" id="privacy-consent" name="privacy_consent" required value="true" />
+                  <span
+                    >개인정보 수집·이용에 동의합니다. 수집 항목은 문의 응대 목적의 이름, 이메일,
+                    연락처, 문의 내용이며, 목적 달성 후 지체 없이 파기합니다.</span
+                  >
+                </label>
+              </div>
+              <button type="submit" class="btn btn-primary" id="contact-submit">제출하기</button>
+              <div class="form-status" id="form-status" role="status"></div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <p class="footer-brand">AURÉLIS</p>
+            <p>아우렐리스 코스메틱스 AURELIS COSMETICS</p>
+            <p><a href="mailto:hello@aurelis.example">hello@aurelis.example</a></p>
+          </div>
+          <div class="footer-legal" id="privacy">
+            <p><strong>개인정보 처리방침 (콘셉트 데모)</strong></p>
+            <p>
+              본 페이지는 브랜드 콘셉트 시연용입니다. 문의 시 수집되는 정보는 응대 목적으로만
+              사용되며, Google Sheets 연동 시 운영 담당자만 접근할 수 있습니다. 실제 서비스
+              운영 전 관련 법령에 맞는 최종 문구와 보유 기간을 확정해야 합니다.
+            </p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2026 Aurelis Cosmetics. Concept demo.</span>
+          <a href="#privacy">개인정보 처리방침</a>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/js/main.js"></script>
+  </body>
+</html>

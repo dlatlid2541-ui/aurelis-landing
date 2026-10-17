@@ -1,0 +1,23 @@
+[
+  {
+    "slug": "ceramide",
+    "nameEn": "Ceramide",
+    "nameKo": "세라마이드",
+    "description": "피부 장벽을 구성하는 핵심 지질 성분으로, 수분 손실을 방지하고 피부를 보호합니다.",
+    "image": "/assets/images/ingredient-ceramide.jpg"
+  },
+  {
+    "slug": "hyaluronic-acid",
+    "nameEn": "Hyaluronic Acid",
+    "nameKo": "히알루론산",
+    "description": "자신의 무게의 1,000배 수분을 흡수하는 보습 성분으로, 피부 깊숙이 수분을 공급합니다.",
+    "image": "/assets/images/ingredient-hyaluronic-acid.jpg"
+  },
+  {
+    "slug": "panthenol",
+    "nameEn": "Panthenol",
+    "nameKo": "판테놀",
+    "description": "비타민 B5 유도체로 피부 진정과 재생을 촉진하며, 민감한 피부를 부드럽게 케어합니다.",
+    "image": "/assets/images/ingredient-panthenol.jpg"
+  }
+]

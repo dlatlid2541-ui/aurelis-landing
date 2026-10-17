@@ -1,0 +1,46 @@
+[
+  {
+    "slug": "lumen-hydra",
+    "line": "01 LUMEN HYDRA",
+    "name": "루멘 하이드라 글래스 에센스",
+    "volume": "50 mL",
+    "message": "맑은 결은 수분의 균형에서 시작됩니다.",
+    "benefits": "보습 · 윤기 · 결 정돈",
+    "image": "/assets/images/product-hydrating-essence.jpg",
+    "accentColor": "#BFD8E8",
+    "inquiry_label": "루멘 하이드라 제품 문의"
+  },
+  {
+    "slug": "calm-veil",
+    "line": "02 CALM VEIL",
+    "name": "캄 베일 배리어 세럼",
+    "volume": "30 mL",
+    "message": "흔들린 피부에 조용한 보호막.",
+    "benefits": "장벽 케어 · 저자극 · 진정",
+    "image": "/assets/images/product-serum.jpg",
+    "accentColor": "#8DA48B",
+    "inquiry_label": "캄 베일 제품 문의"
+  },
+  {
+    "slug": "vital-trace",
+    "line": "03 VITAL TRACE",
+    "name": "바이탈 트레이스 리뉴 크림",
+    "volume": "50 mL",
+    "message": "시간이 남긴 결에 깊이를 더하다.",
+    "benefits": "탄력 · 영양 · 가벼운 마무리",
+    "image": "/assets/images/product-cream.jpg",
+    "accentColor": "#B88945",
+    "inquiry_label": "바이탈 트레이스 제품 문의"
+  },
+  {
+    "slug": "nocturne",
+    "line": "04 NOCTURNE",
+    "name": "녹턴 리페어 오일",
+    "volume": "30 mL",
+    "message": "잠든 사이, 피부의 리듬을 되돌리는 한 방울.",
+    "benefits": "나이트 케어 · 멀티 오일 · 회복",
+    "image": "/assets/images/product-oil.jpg",
+    "accentColor": "#A8A9A6",
+    "inquiry_label": "녹턴 제품 문의"
+  }
+]
