@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>게시판 | AURÉLIS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Sans+KR:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/tokens.css" />
+    <link rel="stylesheet" href="/css/layout.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+    <link rel="stylesheet" href="/css/auth-board.css" />
+  </head>
+  <body class="page-sub">
+    <header class="site-header site-header--solid is-scrolled" id="site-header">
+      <div class="container header-inner">
+        <a href="/index.html" class="logo" aria-label="AURÉLIS 홈">AURÉLIS</a>
+        <nav class="nav-desktop" aria-label="주요 메뉴">
+          <a class="nav-link" href="/index.html#story">Story</a>
+          <a class="nav-link" href="/index.html#products">Products</a>
+          <a class="nav-link" href="/board.html" data-board-link aria-current="page">게시판</a>
+        </nav>
+        <div class="header-end">
+          <div class="header-auth" aria-label="계정">
+            <a class="btn btn-header-auth is-hidden" href="/signup.html" id="auth-signup-btn">회원가입</a>
+            <a class="btn btn-header-auth btn-header-auth--primary" href="/login.html" id="auth-login-btn"
+              >로그인</a
+            >
+            <div class="header-auth-user is-hidden" id="auth-user-wrap">
+              <span class="header-auth-email" id="auth-user-email"></span>
+              <button type="button" class="btn btn-header-auth" id="auth-logout-btn">로그아웃</button>
+            </div>
+          </div>
+          <button
+            type="button"
+            class="nav-toggle"
+            id="nav-toggle"
+            aria-expanded="false"
+            aria-controls="nav-mobile"
+            aria-label="메뉴 열기"
+          >
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+          </button>
+        </div>
+      </div>
+      <nav class="nav-mobile" id="nav-mobile" aria-label="모바일 메뉴" hidden>
+        <ul class="nav-mobile-list">
+          <li><a class="nav-link" href="/index.html">홈</a></li>
+          <li><a class="nav-link" href="/board.html" data-board-link>게시판</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="board-page section">
+      <div class="container board-layout">
+        <header class="board-header">
+          <p class="section-label">Community</p>
+          <h1 class="section-title">게시판</h1>
+          <p class="section-lead">회원만 글 목록을 보고 새 글을 작성할 수 있습니다.</p>
+        </header>
+
+        <section class="board-compose contact-form-wrap" aria-labelledby="board-compose-title">
+          <h2 id="board-compose-title" class="board-compose__title">새 글 작성</h2>
+          <form id="board-compose-form">
+            <div class="form-field">
+              <label for="board-title">제목</label>
+              <input type="text" id="board-title" name="title" maxlength="120" required />
+            </div>
+            <div class="form-field">
+              <label for="board-content">내용</label>
+              <textarea id="board-content" name="content" rows="6" maxlength="4000" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">등록</button>
+            <div class="form-status" id="board-compose-status" role="status"></div>
+          </form>
+        </section>
+
+        <section class="board-list-wrap" aria-labelledby="board-list-title">
+          <h2 id="board-list-title" class="board-list__title">전체 글</h2>
+          <p class="board-loading" id="board-loading">불러오는 중…</p>
+          <div class="board-list" id="board-post-list"></div>
+        </section>
+      </div>
+    </main>
+
+    <script type="module" src="/js/board.js"></script>
+  </body>
+</html>

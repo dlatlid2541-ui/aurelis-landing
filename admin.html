@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>AURÉLIS | 문의 관리</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Noto+Sans+KR:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/tokens.css" />
+    <link rel="stylesheet" href="/css/layout.css" />
+    <link rel="stylesheet" href="/css/admin.css" />
+  </head>
+  <body class="admin-body">
+    <header class="admin-header">
+      <div class="container admin-header__inner">
+        <div>
+          <p class="admin-eyebrow">AURÉLIS Admin</p>
+          <h1 class="admin-title">인바운드 문의 관리</h1>
+        </div>
+        <button type="button" class="btn btn-outline-dark btn-sm" id="btn-logout" hidden>로그아웃</button>
+      </div>
+    </header>
+
+    <main class="container admin-main">
+      <section id="auth-panel" class="admin-card">
+        <h2 class="admin-card__title">관리자 인증</h2>
+        <p class="admin-card__lead">
+          Apps Script에 설정한 <strong>ADMIN_TOKEN</strong>을 입력하세요. (브라우저 세션에만 저장)
+        </p>
+        <form id="auth-form" class="admin-auth-form">
+          <label for="admin-token">관리자 토큰</label>
+          <input type="password" id="admin-token" name="token" required autocomplete="off" />
+          <button type="submit" class="btn btn-primary">접속</button>
+        </form>
+        <p class="admin-hint" id="auth-error" role="alert" hidden></p>
+      </section>
+
+      <section id="dashboard-panel" class="admin-dashboard" hidden>
+        <div class="admin-toolbar">
+          <div class="admin-filters">
+            <label for="filter-status">상태</label>
+            <select id="filter-status">
+              <option value="">전체</option>
+            </select>
+            <label for="filter-search" class="sr-only">검색</label>
+            <input type="search" id="filter-search" placeholder="이름, 이메일, ID 검색" />
+          </div>
+          <button type="button" class="btn btn-outline-dark btn-sm" id="btn-refresh">새로고침</button>
+        </div>
+        <p class="admin-status" id="list-status" aria-live="polite"></p>
+        <div class="admin-table-wrap">
+          <table class="admin-table" id="inquiries-table">
+            <thead>
+              <tr>
+                <th>접수</th>
+                <th>ID</th>
+                <th>유형</th>
+                <th>이름</th>
+                <th>연락</th>
+                <th>상태</th>
+                <th>내부 메모</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="inquiries-tbody"></tbody>
+          </table>
+        </div>
+        <div class="admin-cards" id="inquiries-cards" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <script type="module" src="/js/admin.js"></script>
+  </body>
+</html>

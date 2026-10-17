@@ -3,6 +3,9 @@ const submitBtn = document.getElementById('contact-submit');
 const statusEl = document.getElementById('form-status');
 
 const GAS_URL = import.meta.env.VITE_GAS_WEB_APP_URL || '';
+if (!GAS_URL && import.meta.env.DEV) {
+  console.warn('[contact] VITE_GAS_WEB_APP_URL 없음 → 제출 시 시뮬레이션만 됩니다.');
+}
 const formOpenedAt = Date.now();
 const MIN_SUBMIT_MS = 3000;
 
@@ -122,7 +125,11 @@ form?.addEventListener('submit', async (e) => {
         throw new Error(result.error || 'Submit failed');
       }
       form.reset();
-      showStatus('문의가 접수되었습니다. 영업일 기준 2–3일 내 연락드리겠습니다.', 'success');
+      const idNote = result.inquiry_id ? ` (접수 ID: ${result.inquiry_id})` : '';
+      showStatus(
+        `문의가 접수되었습니다.${idNote} 영업일 기준 2–3일 내 연락드리겠습니다.`,
+        'success'
+      );
     } else {
       await new Promise((r) => setTimeout(r, 600));
       console.info('[데모] 문의 접수 시뮬레이션:', payload);
@@ -134,7 +141,15 @@ form?.addEventListener('submit', async (e) => {
     }
   } catch (err) {
     console.error(err);
-    showStatus('제출 중 오류가 발생했습니다. 잠시 후 다시 시도해 주세요.', 'error');
+    const msg = String(err.message || err);
+    if (msg === 'Failed to fetch' || msg.includes('NetworkError')) {
+      showStatus(
+        '서버에 연결하지 못했습니다. GAS 웹앱 URL·배포(모든 사용자)를 확인하거나, 페이지를 새로고침 후 3초 뒤 다시 제출해 주세요.',
+        'error'
+      );
+    } else {
+      showStatus(`제출 오류: ${msg}`, 'error');
+    }
   } finally {
     submitBtn.disabled = false;
   }

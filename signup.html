@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입 | AURÉLIS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Sans+KR:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/tokens.css" />
+    <link rel="stylesheet" href="/css/layout.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+    <link rel="stylesheet" href="/css/auth-board.css" />
+  </head>
+  <body class="page-sub">
+    <header class="site-header site-header--solid is-scrolled" id="site-header">
+      <div class="container header-inner">
+        <a href="/index.html" class="logo" aria-label="AURÉLIS 홈">AURÉLIS</a>
+        <nav class="nav-desktop" aria-label="주요 메뉴">
+          <a class="nav-link" href="/index.html#story">Story</a>
+          <a class="nav-link" href="/index.html#products">Products</a>
+          <a class="nav-link" href="/board.html" data-board-link>게시판</a>
+        </nav>
+        <div class="header-end">
+          <div class="header-auth" aria-label="계정">
+            <a class="btn btn-header-auth is-hidden" href="/signup.html" id="auth-signup-btn">회원가입</a>
+            <a class="btn btn-header-auth btn-header-auth--primary" href="/login.html" id="auth-login-btn"
+              >로그인</a
+            >
+            <div class="header-auth-user is-hidden" id="auth-user-wrap">
+              <span class="header-auth-email" id="auth-user-email"></span>
+              <button type="button" class="btn btn-header-auth" id="auth-logout-btn">로그아웃</button>
+            </div>
+          </div>
+          <button
+            type="button"
+            class="nav-toggle"
+            id="nav-toggle"
+            aria-expanded="false"
+            aria-controls="nav-mobile"
+            aria-label="메뉴 열기"
+          >
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+          </button>
+        </div>
+      </div>
+      <nav class="nav-mobile" id="nav-mobile" aria-label="모바일 메뉴" hidden>
+        <ul class="nav-mobile-list">
+          <li><a class="nav-link" href="/index.html">홈</a></li>
+          <li><a class="nav-link" href="/board.html" data-board-link>게시판</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="auth-page">
+      <div class="container auth-page__inner">
+        <p class="section-label">Member</p>
+        <h1 class="section-title">회원가입</h1>
+        <p class="section-lead">이메일과 비밀번호로 계정을 만듭니다. 정보는 Supabase Auth에 저장됩니다.</p>
+
+        <form class="auth-form contact-form-wrap" id="auth-form" data-auth-mode="signup">
+          <div class="form-field">
+            <label for="auth-email">이메일</label>
+            <input type="email" id="auth-email" name="email" autocomplete="email" required />
+          </div>
+          <div class="form-field">
+            <label for="auth-password">비밀번호 (6자 이상)</label>
+            <input
+              type="password"
+              id="auth-password"
+              name="password"
+              autocomplete="new-password"
+              minlength="6"
+              required
+            />
+          </div>
+          <button type="submit" class="btn btn-primary">가입하기</button>
+          <div class="form-status" id="auth-status" role="status"></div>
+        </form>
+
+        <p class="auth-switch">
+          이미 계정이 있으신가요?
+          <a href="/login.html" id="auth-login-switch">로그인</a>
+        </p>
+      </div>
+    </main>
+
+    <script type="module" src="/js/auth-page.js"></script>
+  </body>
+</html>

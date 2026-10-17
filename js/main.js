@@ -1,6 +1,7 @@
 import './products.js';
 import './ingredients.js';
 import './contact.js';
+import { initAuthUI } from './auth-ui.js';
 
 const header = document.getElementById('site-header');
 const navToggle = document.getElementById('nav-toggle');
@@ -100,5 +101,7 @@ document.addEventListener('keydown', (e) => {
 
 const heroReveal = heroSection?.querySelector('.reveal');
 if (heroReveal) heroReveal.classList.add('is-visible');
+
+initAuthUI();
 
 export { closeMobileNav, prefersReducedMotion };

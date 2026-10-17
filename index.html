@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="/css/tokens.css" />
     <link rel="stylesheet" href="/css/layout.css" />
     <link rel="stylesheet" href="/css/components.css" />
+    <link rel="stylesheet" href="/css/auth-board.css" />
   </head>
   <body>
     <header class="site-header is-over-hero" id="site-header">
@@ -35,19 +36,32 @@
           <a class="nav-link" href="#ingredients">Ingredients</a>
           <a class="nav-link" href="#ritual">Ritual</a>
           <a class="nav-link" href="#contact">Contact</a>
+          <a class="nav-link" href="/board.html" data-board-link>게시판</a>
         </nav>
-        <button
-          type="button"
-          class="nav-toggle"
-          id="nav-toggle"
-          aria-expanded="false"
-          aria-controls="nav-mobile"
-          aria-label="메뉴 열기"
-        >
-          <span class="nav-toggle-bar"></span>
-          <span class="nav-toggle-bar"></span>
-          <span class="nav-toggle-bar"></span>
-        </button>
+        <div class="header-end">
+          <div class="header-auth" aria-label="계정">
+            <a class="btn btn-header-auth is-hidden" href="/signup.html" id="auth-signup-btn">회원가입</a>
+            <a class="btn btn-header-auth btn-header-auth--primary" href="/login.html" id="auth-login-btn"
+              >로그인</a
+            >
+            <div class="header-auth-user is-hidden" id="auth-user-wrap">
+              <span class="header-auth-email" id="auth-user-email"></span>
+              <button type="button" class="btn btn-header-auth" id="auth-logout-btn">로그아웃</button>
+            </div>
+          </div>
+          <button
+            type="button"
+            class="nav-toggle"
+            id="nav-toggle"
+            aria-expanded="false"
+            aria-controls="nav-mobile"
+            aria-label="메뉴 열기"
+          >
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+          </button>
+        </div>
       </div>
       <nav class="nav-mobile" id="nav-mobile" aria-label="모바일 메뉴" hidden>
         <ul class="nav-mobile-list">
@@ -56,6 +70,11 @@
           <li><a class="nav-link" href="#ingredients">Ingredients</a></li>
           <li><a class="nav-link" href="#ritual">Ritual</a></li>
           <li><a class="nav-link" href="#contact">Contact</a></li>
+          <li><a class="nav-link" href="/board.html" data-board-link>게시판</a></li>
+          <li class="nav-mobile-auth">
+            <a class="nav-link" href="/login.html" id="auth-login-mobile">로그인</a>
+            <a class="nav-link" href="/signup.html" id="auth-signup-mobile">회원가입</a>
+          </li>
         </ul>
       </nav>
     </header>
